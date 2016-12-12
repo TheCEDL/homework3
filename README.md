@@ -12,7 +12,7 @@ You need to run your discriminator on this evaluation dataset. We will rank each
 
 # Dataset for training
 Please download Places2 training data (small images 256x256)
-<a>http://places2.csail.mit.edu/challenge2016/train_256_places365challenge.tar</a>
+<a>http://places2.csail.mit.edu/challenge2016/train_256_places365standard.tar</a>
 
 We only use images from the following classes (indoor scenes):
 <b>bedroom, childs room, dining room, dorm room, hotel room, living room, recreation room, storage room, television room, and waiting room.</b>
