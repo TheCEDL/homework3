@@ -16,8 +16,8 @@ The training data are from Places2 standard dataset (small images 256x256)
 
 We only use images of the following classes (indoor scenes):
 <b>bedroom, childs room, dining room, dorm room, hotel room, living room, recreation room, storage room, television room, and waiting room.</b>
-Just for your convenience, here is a compilation of images from those clasees:
-<a>https://dl.dropboxusercontent.com/u/26848284/indoor.tgz</a>
+Just for your convenience, here is a compilation of images from those clasees:<br>
+<a>https://dl.dropboxusercontent.com/u/26848284/indoor.tgz</a><br>
 The link will be removed after homework due date.
 
 # Important dates
