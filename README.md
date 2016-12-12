@@ -11,11 +11,14 @@ We will collect the images from all teams and create an evaluation dataset conta
 You need to run your discriminator on this evaluation dataset. We will rank each team according to the prediction results. You also have to submit a report describing your modifications and references.
 
 # Dataset for training
-Please download Places2 training data (small images 256x256)
+The training data are from Places2 standard dataset (small images 256x256)
 <a>http://places2.csail.mit.edu/challenge2016/train_256_places365standard.tar</a>
 
-We only use images from the following classes (indoor scenes):
+We only use images of the following classes (indoor scenes):
 <b>bedroom, childs room, dining room, dorm room, hotel room, living room, recreation room, storage room, television room, and waiting room.</b>
+Just for your convenience, here is a compilation of images from those clasees:
+<a>https://dl.dropboxusercontent.com/u/26848284/indoor.tgz</a>
+The link will be removed after homework due date.
 
 # Important dates
 * The generated images must be submitted before 6pm, December 21.
