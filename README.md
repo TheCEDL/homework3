@@ -21,7 +21,7 @@ Just for your convenience, here is a compilation of images from those clasees:<b
 The link will be removed after homework due date.
 
 # Important dates
-* The generated images must be submitted before 6pm, December 21.
-* Evaluation dataset will be avaialbe after 10pm, December 21.
-* The prediction results must be submitted before 10am, December 22.
-* Your written report is due 10pm, December 22.
+* The generated images must be submitted before 6pm, ~~December 21~~ December 26.
+* Evaluation dataset will be avaialbe after 10pm, ~~December 21~~ December 26.
+* The prediction results must be submitted before 10am, ~~December 22~~ December 27.
+* Your written report is due 10pm, ~~December 22~~ December 27.
