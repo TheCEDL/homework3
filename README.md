@@ -28,4 +28,4 @@ The link will be removed after homework due date.
 
 
 # Upload Generated Data Link
-  https://www.dropbox.com/s/rg51cjdf1idgt61/generated.zip?dl=0
+  m104.nthu.edu.tw/~s104062599/generated_images.zip
