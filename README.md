@@ -28,4 +28,4 @@ The link will be removed after homework due date.
 
 
 # Upload Generated Data Link
-  m104.nthu.edu.tw/~s104062599/generated_images.zip
+  http://m104.nthu.edu.tw/~s104062599/generated_images.zip
