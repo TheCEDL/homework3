@@ -2,3 +2,6 @@
 這一次作業是利用DCGAN去訓練place2的dataset生成假資料提交500張上去，再利用我們所得到的model去discriminate H3eval dataset <br>
 生成照片 <br>
 ![image](https://github.com/chang810249/homework3/blob/master/train_30_0769.png) <br>
+提交之後再利用我們的model去discriminate H3eval dataset，可以得到如下列數字 <br>
+透過discriminator辨識 <br>
+![image](https://github.com/chang810249/homework3/blob/master/D_digit.PNG) <br>
