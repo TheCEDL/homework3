@@ -1,3 +1,3 @@
 組員: 張嘉哲、林暘峻
-<br>這一次作業是利用DCGAN去訓練place2的dataset生成假資料提交500張上去，再利用我們所得到的model去discriminate H3eval dataset </br>
-<br>![生成照片](./train_30_0769.png)</br>
+<br>這一次作業是利用DCGAN去訓練place2的dataset生成假資料提交500張上去，再利用我們所得到的model去discriminate H3eval dataset <br>
+<br>![生成照片](https://github.com/chang810249/homework3/blob/master/train_30_0769.png)<br>
