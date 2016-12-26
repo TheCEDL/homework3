@@ -1,15 +1,21 @@
 # Report
 
-In this homework, I modified 3 files so that the model can generate images with 256 resolution.
+In this homework, I modified 3 files so that the model can generate images with 256x256 resolution.
 
 ## 1. main.py
+
+By repacing 64 with 256, the input images can have a resolution 256x256.
 
     flags.DEFINE_integer("output_size", 256, "The size of the output images to produce [256]")
 
 ## 2. model.py
 
+Turning the output_size into 256 to output 256x256-resolusion images. Lowering the gf_dim as well as df_dim to make it easier for 2 appended layers.
+
     batch_size=64, sample_size = 64, output_size=256,
     y_dim=None, z_dim=100, gf_dim=16, df_dim=16,
+
+Batch normalization for 2 appended layers.
 
     self.d_bn3 = batch_norm(name='d_bn3')
     self.d_bn4 = batch_norm(name='d_bn4')
@@ -21,11 +27,15 @@ In this homework, I modified 3 files so that the model can generate images with 
 
     self.g_bn5 = batch_norm(name='g_bn5')
 
+Appending 2 layers for discriminator so that the image parameters can be reshaped smoothly.
+
     h4 = lrelu(self.d_bn4(conv2d(h3, self.df_dim*16, name='d_h4_conv')))
     h5 = lrelu(self.d_bn5(conv2d(h4, self.df_dim*32, name='d_h5_conv')))
     h6 = linear(tf.reshape(h5, [self.batch_size, -1]), 1, 'd_h5_lin')
 
     return tf.nn.sigmoid(h6), h6
+
+Similarly, there are 2 appended layers for generator. However, the parameters for the original layers also need to be modified.
 
     s2, s4, s8, s16, s32, s64 = int(s/2), int(s/4), int(s/8), int(s/16), int(s/32), int(s/64)
 
@@ -55,6 +65,8 @@ In this homework, I modified 3 files so that the model can generate images with 
 
     return tf.nn.tanh(h6)
 
+Similarly, 2 appended layers are adapted to sampler. The parameters of every layer are given in proportion.
+
     s2, s4, s8, s16, s32, s64 = int(s/2), int(s/4), int(s/8), int(s/16), int(s/32), int(s/64)
 
     h0 = tf.reshape(linear(z, self.gf_dim*32*s64*s64, 'g_h0_lin'),
@@ -78,7 +90,11 @@ In this homework, I modified 3 files so that the model can generate images with 
 
 ## 3. utils.py
 
+This may be redundant. Just to make conditions for images with higher resolution.
+
     def get_image(image_path, image_size, is_crop=True, resize_w=256, is_grayscale = False):
+
+To achieve the goal that during the testing process every output is a single image instead of a combined image with 64 sub-images.
 
     #for idx, image in enumerate(images):
     #i = idx % size[1]
@@ -86,7 +102,14 @@ In this homework, I modified 3 files so that the model can generate images with 
     #img[j*h:j*h+h, i*w:i*w+w, :] = image
     img = images
 
+Since npx represents the number of pixels of the width/height of image.
+
     def transform(image, npx=256, is_crop=True, resize_w=64):
+
+The output will be 64 single images other than one image with 64 sub-images.
 
     for i in xrange(len(samples)):
     save_images(samples[i], [1, 1], './samples/test_arange_%s_%s.png' % (idx, i))
+
+
+I also tried to replace the value of z_dim, 100, with 500 to generate 500 totally dissimilar images, however, it went wrong after training 499 images.
