@@ -26,3 +26,11 @@ The link will be removed after homework due date.
 <a>http://oz.nthu.edu.tw/~u932014/HW3eval.zip</a>
 * The prediction results must be submitted before 10am, ~~December 22~~ December 27.
 * Your written report is due 10pm, ~~December 22~~ December 27.
+
+# Generated Samples
+Our generated 500 images from indoor dataset:
+Link: <a>https://drive.google.com/open?id=0BxFvBc0crSHbRksyOVUzLTdVeEU</a><br>
+
+Member: 
+- 姓名：<a href="https://github.com/Timforce">李冠毅</a>　學號：104064510 <br>
+- 姓名：<a href="https://github.com/gjlnnv">李季紘</a>　學號：(交大)0556083 <br>
