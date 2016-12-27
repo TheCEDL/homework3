@@ -26,3 +26,7 @@ The link will be removed after homework due date.
 <a>http://oz.nthu.edu.tw/~u932014/HW3eval.zip</a>
 * The prediction results must be submitted before 10am, ~~December 22~~ December 27.
 * Your written report is due 10pm, ~~December 22~~ December 27.
+
+
+# Upload Generated Data Link
+  http://m104.nthu.edu.tw/~s104062599/generated_images.zip
