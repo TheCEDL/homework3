@@ -20,16 +20,25 @@ Just for your convenience, here is a compilation of images from those clasees:<b
 <a>https://dl.dropboxusercontent.com/u/26848284/indoor.tgz</a><br>
 The link will be removed after homework due date.
 
-# Important dates
-* The generated images must be submitted before 6pm, ~~December 21~~ December 26.
-* Evaluation dataset will be avaialbe after 10pm, ~~December 21~~ December 26.
-* The prediction results must be submitted before 10am, ~~December 22~~ December 27.
-* Your written report is due 10pm, ~~December 22~~ December 27.
+# About our trained network
+Our network is trained based on indoor dataset and the codes within this repository(with orginate from <a href="https://github.com/carpedm20/DCGAN-tensorflow">carpedm20</a>). The presented result here is trained for 40 epochs and 64 batch_size. We have several other results, among them, we consider this one looks like good one.
+
+# Charts
+#### d_loss
+![d_loss](Charts/d_loss.png "d_loss")
+#### g_loss
+![g_loss](Charts/g_loss.png "g_loss")
+
+# Our report of this assignment
+We present our report as a <a href="HW3_Report.pdf">pdf file</a>.
 
 # Generated Samples
 Our generated 500 images from indoor dataset:
 Link: <a>https://drive.google.com/open?id=0BxFvBc0crSHbRksyOVUzLTdVeEU</a><br>
 
-Member: 
+# Member
 - 姓名：<a href="https://github.com/Timforce">李冠毅</a>　學號：104064510 <br>
+負責內容：Network evaluation，實驗討論，架構整理，報告彙整
+
 - 姓名：<a href="https://github.com/gjlnnv">李季紘</a>　學號：(交大)0556083 <br>
+負責內容：Network training，實驗討論，架構整理，程式修訂
