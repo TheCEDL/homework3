@@ -17,7 +17,7 @@ Finally, 姿伶 typed the final report on github.
 　　　　　　　　　　　　　　　　　　　　**Fig .1** Value Function of GAN<br>
 
 　　This is the objective function of GAN, D() is a descriptor and G() is a generator.<br>
-　　The goal of the generator is to generate a fake image that looks like a real image. And the goal of the descriptor is to judge the fake and the real image.<br>
+　　The goal of the generator is to generate a fake image that looks like a real image. And the goal of the descriptor is to judge the fake and the real image.<br><br>
 　　Therefore, it’s a competitive relationship between the descriptor and generator.<br><br>
 　　In this homework we try some settings. The first one is directly modify the output to 256 x 256(model 1). However, with this setting the feature map of the first layer would be 16 x16. In order to remain the size of the first layer’s feature map, we makes the network deeper(model 2,4). After adding two convolution layers, feature maps of this deeper network would be the size of [4 8 16 32 64 128 256]. Finally, since the kernel size of this network is 5x5, we also modify this size to 3x3 to test whether the smaller kernel size could improve the result(model 3,4).<br><br>
    
