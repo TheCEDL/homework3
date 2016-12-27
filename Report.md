@@ -118,4 +118,58 @@ I also tried to replace the value of z_dim, 100, with 500 to generate 500 totall
 
 ##Modification for discrimination
 
-###1.main.py
+Thanks to my modification, we can now conveniently discriminate images by:
+
+    $ python main.py --dataset DATASET_NAME --is_test True
+
+### 1. main.py
+
+With a new boolean function, we can start the discrimination work without affecting the original training and test instructions of the model.
+
+    flags.DEFINE_boolean("is_test", False, "True for discriminating, False for nothing [False]")
+
+This is to decide whether the model have to do testing or dicriminating work.
+
+    if FLAGS.is_test:
+        dcgan.test(FLAGS)
+    else:
+        # Below is codes for visualization
+        OPTION = 1
+        visualize(sess, dcgan, FLAGS, OPTION)
+        
+### 2. model.py
+
+This is the detailed function for the discrimination work. It first restore the model parameters from checkpoint, then read the images according to the .txt file and finally predict the discrimination result and.
+
+    def test(self, config):
+        #root = '~/team14/DCGAN-tensorflow'
+        root = '.'
+        Modelparameters = os.path.join(root, 'checkpoint')
+        model_dir = 'DATASET_NAME_64_256'
+        Modelparameters = os.path.join(Modelparameters, model_dir)
+        model = tf.train.latest_checkpoint(Modelparameters)
+        self.saver.restore(self.sess,model)
+        print(" [*] Success to restore model")
+        data = []
+        evalFile = open('./HW3eval/eval.txt','r')
+        Filenames = evalFile.readlines()
+        for line in Filenames:
+            try:
+                img = transform(imread('./HW3eval/eval/'+line[:-1]+'.png'), 122, False)
+            except:
+                img = transform(imread('./HW3eval/eval/'+line[:-1]+'.jpg'), 122, False)
+            data.append(img)
+        print(" [*] Success to read data")
+        Resultfile = open('Discriminator_res.txt','w')
+        Iterations = len(data)//self.batch_size +1
+        for j in xrange(Iterations):
+            print(" [*] %d" % j)
+            sample = data[j:j+self.batch_size]
+            D, D_logits = self.sess.run([self.D, self.D_logits], feed_dict = {self.images:sample})
+            for k in xrange(len(D)):
+                if D[k] [0]>0.5:
+                    Result = 1
+                else:
+                    Result = 0
+                Resultfile.write('%d\n'%(Result))
+        Resultfile.close()
