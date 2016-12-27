@@ -139,7 +139,7 @@ This is to decide whether the model have to do testing or dicriminating work.
         
 ### 2. model.py
 
-This is the detailed function for the discrimination work. It first restore the model parameters from checkpoint, then read the images according to the .txt file and finally predict the discrimination result and.
+This is the detailed function for the discrimination work. It first restore the model parameters from checkpoint, then read the images according to the .txt file and finally predict the discrimination result and save the result to a new .txt file.
 
     def test(self, config):
         root = '.'
