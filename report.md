@@ -8,7 +8,8 @@
 ![image](https://github.com/chang810249/homework3/blob/master/dis.PNG) <br>
 
 [detail] <br>
-拿到DCGAN(https://github.com/carpedm20/DCGAN-tensorflow)的code之後可以透過FLAG更改成自己想要的樣子 <br>
+DCGAN(https://github.com/carpedm20/DCGAN-tensorflow)  <br>
+clone之後可以透過FLAG更改成自己想要的樣子 <br>
 --dataset: 可以訓練自己的dataset <br>
 --output_size: 輸出img size <br>
 --is_train: 是否訓練 <br>
