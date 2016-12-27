@@ -28,19 +28,21 @@
 ## Experiment Discusion
 ### 結果一
 
-  <img src=/image/1.png width=400 />
+  <img src=/image/1.png width=600 />
 
 ### 結果二
 
-  <img src=/image/2.png width=400 />
+  <img src=/image/2.png width=600 />
   
   從兩個嘗試的結果來看，結果一上具有許多空白的小點，呈現的結果也稍微比較混亂，推測因為feature map數量不夠多，原始DCGAN的paper要生成64x64的影像，初始的feature map數量為1024，但由於程式碼中的資料以人臉和數字為主，相比於場景是比較沒那麼複雜的資料，故將feature map數量降為一半，這樣的設置或許不適用於場景影像的生成。
   
   結果二若單從比較成功的影像來看，呈現的影像比較乾淨和工整，不過其中有幾張卻有巨大的空白，沒有產出完整的區塊，也有比較多整張異色的影象，又由於許多結果有一些尚未收斂時的那種紋路，推測訓練的epoch（25），似乎還沒辦法讓整個model收斂完畢，又或著z的維度其實不太需要調整，應該要調降。從綜合結果來看，效果並未大大提升，但感覺是一個方向。
   
 ## Evaluation Method
-利用嘗試一的model去discriminate提供的H3eval dataset，得到結果如下
+利用嘗試一的model去discriminate提供的H3eval dataset，得到結果如下圖所示
+<img src=/image/3.png width=300 />
 
+之後我們用-5的threshold去辨別是不是真實室內場景，可得到1或0的字串。 
   
   
   
