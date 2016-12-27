@@ -137,7 +137,6 @@ Graph building and session running are similar to [DCGAN-tensorflow](https://git
 ## Result
 ###Stage 1
 <table border=1>
-<tr>
 <td>
 <img src="asset/stage1/1.png" width="24%"/>
 <img src="asset/stage1/2.png"  width="24%"/>
@@ -145,12 +144,10 @@ Graph building and session running are similar to [DCGAN-tensorflow](https://git
 <img src="asset/stage1/4.png" width="24%"/>
 <img src="asset/stage1/5.png" width="24%"/>
 </td>
-</tr>
 </table>
 
 ###Stage 2
 <table border=1>
-<tr>
 <td>
 <img src="asset/stage2/1.png" width="24%"/>
 <img src="asset/stage2/2.png"  width="24%"/>
@@ -158,5 +155,7 @@ Graph building and session running are similar to [DCGAN-tensorflow](https://git
 <img src="asset/stage2/4.png" width="24%"/>
 <img src="asset/stage2/5.png" width="24%"/>
 </td>
-</tr>
 </table>
+
+## Contribution
+We survey the recent work together and found that stack gan is suitable for our task. We modify the code together with similar contribution.
