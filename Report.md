@@ -1,14 +1,16 @@
 # Report
 
-In this homework, I modified 3 files so that the model can generate images with 256x256 resolution.
+In this homework, I modified 3 files so that the model can generate images with 256x256 resolution and 2 files in order that the model can discriminate whether the input image is natural or artificial. For better clarity, I will demonstrate them separately.
 
-## 1. main.py
+##Modification for higher resolution
+
+### 1. main.py
 
 By repacing 64 with 256, the input images can have a resolution 256x256.
 
     flags.DEFINE_integer("output_size", 256, "The size of the output images to produce [256]")
 
-## 2. model.py
+### 2. model.py
 
 Turning the output_size into 256 to output 256x256-resolusion images. Lowering the gf_dim as well as df_dim to make it easier for 2 appended layers.
 
@@ -88,7 +90,7 @@ Similarly, 2 appended layers are adapted to sampler. The parameters of every lay
 
     return tf.nn.tanh(h6)
 
-## 3. utils.py
+### 3. utils.py
 
 This may be redundant. Just to make conditions for images with higher resolution.
 
@@ -113,3 +115,7 @@ The output will be 64 single images other than one image with 64 sub-images.
 
 
 I also tried to replace the value of z_dim, 100, with 500 to generate 500 totally dissimilar images, however, it went wrong after training 499 images.
+
+##Modification for discrimination
+
+###1.main.py
