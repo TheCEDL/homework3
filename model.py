@@ -458,7 +458,6 @@ class DCGAN(object):
             return False
 
     def test(self, config):
-        #root = '~/team14/DCGAN-tensorflow'
         root = '.'
         Modelparameters = os.path.join(root, 'checkpoint')
         model_dir = 'DATASET_NAME_64_256'
@@ -476,7 +475,7 @@ class DCGAN(object):
                 img = transform(imread('./HW3eval/eval/'+line[:-1]+'.jpg'), 122, False)
             data.append(img)
         print(" [*] Success to read data")
-        Resultfile = open('Discriminator_res.txt','w')
+        Resultfile = open('test_result.txt','w')
         Iterations = len(data)//self.batch_size +1
         for j in xrange(Iterations):
             print(" [*] %d" % j)
