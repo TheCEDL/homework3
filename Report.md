@@ -165,19 +165,19 @@ The submitted images and the discrimia=nator we used are from version 1. We thou
 <table border=1>
 <tr>
 <td>
-<img src="images/o1.png" width="24%"/>
-<img src="images/o2.png" width="24%"/>
-<img src="images/o3.png" width="24%"/>
-<img src="images/o4.png" width="24%"/>
+<img src="o1.png" width="24%"/>
+<img src="o2.png" width="24%"/>
+<img src="o3.png" width="24%"/>
+<img src="o4.png" width="24%"/>
 </td>
 </tr>
 
 <tr>
 <td>
-<img src="images/a1.png" width="24%"/>
-<img src="images/a1.png" width="24%"/>
-<img src="images/a1.png" width="24%"/>
-<img src="images/a1.png" width="24%"/>
+<img src="a1.png" width="24%"/>
+<img src="a2.png" width="24%"/>
+<img src="a3.png" width="24%"/>
+<img src="a4.png" width="24%"/>
 </td>
 </tr>
 
