@@ -124,9 +124,9 @@ Thanks to my modification, we can now conveniently discriminate images by:
 
 ### 1. main.py
 
-With a new boolean function, we can start the discrimination work without affecting the original training and test instructions of the model.
+With a new boolean function, we can start the discrimination work without affecting the original training and testing instructions of the model.
 
-    flags.DEFINE_boolean("is_test", False, "True for discriminating, False for nothing [False]")
+    flags.DEFINE_boolean("is_test", False, "True for discriminating, False for testing [False]")
 
 This is to decide whether the model have to do testing or dicriminating work.
 
