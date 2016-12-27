@@ -7,7 +7,7 @@ The Stage-I GAN sketches the primitive shape and basic colors of the object, yie
 Stage-II GAN takes Stage-I results as inputs, and generates high resolution images with photorealistic details. The Stage-II GAN is able to rectify defects and add compelling details with the refinement process.
 Need to mention that in this paper it generates images conditioned on text descriptions while we didn't do this part.
  
-![](https://github.com/gina9726/homework3/blob/master/images/model.png)
+![](https://github.com/gina9726/homework3/blob/master/model.png)
 ## Stage-I
 The structure in stage-I is similar to the DCGAN structure. We modify the DCGAN-tensorflow code to complete this part.
   
@@ -30,11 +30,11 @@ For the discriminator, its structure is similar to that of Stage-I discriminator
 ## Result
 * Stage-I (64x64)  
 
-![](https://github.com/gina9726/homework3/blob/master/images/stageI.jpg) 
+![](https://github.com/gina9726/homework3/blob/master/stageI.jpg) 
 
 * Stage-II (256x256)  
 
-![](https://github.com/gina9726/homework3/blob/master/images/stageII.jpg)
+![](https://github.com/gina9726/homework3/blob/master/stageII.jpg)
 
 ## Reference paper
 [UNSUPERVISED REPRESENTATION LEARNING
