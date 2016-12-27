@@ -160,6 +160,9 @@ def predict_result(sess, dcgan, config):
 ## Discussion
 Although we thought that adding 2 layers would improve performance, The result are pretty bad. All the images tend to look similar to each other. There might be only 4 different scenes out of 64 images. Most of the images looks the same except for some minor color difference.
 The submitted images and the discrimia=nator we used are from version 1. We thought that there are too many parameters from version 2 that the generator take all the input to the best, one and only one vector space.  
+The visulized result is shown below. 1st row is the images generated from version 1. 2nd row is from version 2.
+
+We can see that version 1 generate much more real images to human vision.
 
 ##Visualized Results
 <table border=1>
