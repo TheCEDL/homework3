@@ -40,10 +40,14 @@
   
 ## Evaluation Method
 利用嘗試一的model去discriminate提供的H3eval dataset，得到結果如下圖所示
-<img src=/image/3.png width=300 />
+
+
+<img src=/image/3.png width=100 />
+
 
 之後我們用-5的threshold去辨別是不是真實室內場景，可得到1或0的字串。 
   
+  
 ## Participation
 | Name | Do |
 | :---: | :---: |
