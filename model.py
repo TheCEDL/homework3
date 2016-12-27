@@ -456,3 +456,36 @@ class DCGAN(object):
         else:
             print(" [*] Failed to find a checkpoint")
             return False
+
+    def test(self, config):
+        #root = '~/team14/DCGAN-tensorflow'
+        root = '.'
+        Modelparameters = os.path.join(root, 'checkpoint')
+        model_dir = 'DATASET_NAME_64_256'
+        Modelparameters = os.path.join(Modelparameters, model_dir)
+        model = tf.train.latest_checkpoint(Modelparameters)
+        self.saver.restore(self.sess,model)
+        print(" [*] Success to restore model")
+        data = []
+        evalFile = open('./HW3eval/eval.txt','r')
+        Filenames = evalFile.readlines()
+        for line in Filenames:
+            try:
+                img = transform(imread('./HW3eval/eval/'+line[:-1]+'.png'), 122, False)
+            except:
+                img = transform(imread('./HW3eval/eval/'+line[:-1]+'.jpg'), 122, False)
+            data.append(img)
+        print(" [*] Success to read data")
+        Resultfile = open('Discriminator_res.txt','w')
+        Iterations = len(data)//self.batch_size +1
+        for j in xrange(Iterations):
+            print(" [*] %d" % j)
+            sample = data[j:j+self.batch_size]
+            D, D_logits = self.sess.run([self.D, self.D_logits], feed_dict = {self.images:sample})
+            for k in xrange(len(D)):
+                if D[k] [0]>0.5:
+                    Result = 1
+                else:
+                    Result = 0
+                Resultfile.write('%d\n'%(Result))
+        Resultfile.close()
