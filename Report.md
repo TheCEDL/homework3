@@ -51,7 +51,7 @@
 ## Participation
 | Name | Do |
 | :---: | :---: |
-| 張哲嘉 | 訓練model、產生假資料、Evaluation結果、撰寫報告|
+| 張哲嘉 | 訓練model、產生假資料、Evaluation、撰寫報告|
 | 林暘竣 | 訓練model、產生假資料、撰寫報告、報告排版|
 
   
