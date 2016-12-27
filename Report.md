@@ -37,7 +37,7 @@ Model | Number of Layers | Kernel size
   - From the experiment result, we observe that the deeper network could generate a good fake image, but it tends to generate the same result.(model 2,4)<br>
 * Kernel size<br>
   - Kernel size with 3x3, compared to 5x5, is much more likely to generate some strange patterns.<br>
-* Through the observation of experiment results, we finally choose setting 1(directly modify output's size to 256x256) as the experiment setting. Though the deeper network could generate a good image, it couldn’t generate a large number of different images. For the sake of generation, we finally choose setting 1 as our final result.<br>
+* Through the observation of experiment results, we finally choose setting 1(directly modify output's size to 256x256) as the experiment setting. Though the deeper network could generate a good image, it couldn’t generate a large number of different images. For the sake of generation, we finally choose setting 1 as our final model.<br>
 
 ### Discriminator
 
