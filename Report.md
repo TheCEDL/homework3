@@ -1,4 +1,4 @@
-# 魏凱亞 、劉祐欣 、柯子逸 、林怡均 <span style="color:red">(105062504、105062536、105、105062)</span>
+# 魏凱亞 、劉祐欣 、柯子逸 、林怡均 <span style="color:red">(105062504、105062536、105065514、105062518)</span>
 
 #Homework 3 / Generative Models
 
